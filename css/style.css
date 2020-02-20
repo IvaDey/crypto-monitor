@@ -1,0 +1,270 @@
+html, body, .main-module {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+}
+/*********************************************
+***             HEDEAR                     ***
+*********************************************/
+header {
+    width: 98%;
+    margin: 15px auto;
+    font-size: 16pt;
+}
+
+.general-info {
+    width: 60%;
+    float: left;
+}
+
+.general-info span {
+    color: #7c05ed;
+    font-weight: bold;
+}
+
+.exchange-info {
+    width: 30%;
+    float: right;
+}
+
+.exchange-info span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.exchange-info b {
+    text-decoration: underline;
+    color: #7c05ed;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/*********************************************
+***          MAIN-MODULE                   ***
+*********************************************/
+.main-module {
+    width: 98%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+/*********************************************
+***             TABS                       ***
+*********************************************/
+.tabs {
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+.tab {
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: 18pt;
+    vertical-align: middle;
+}
+
+.tab:hover {
+    background-color: bisque;
+    transition: all 0.2s ease 0s;
+}
+
+.tab img {
+    width: 32px;
+}
+
+#add-coin {
+    color: red;
+}
+/*********************************************
+***        PORTFOLIO-INFO                  ***
+*********************************************/
+#portfolio-info {
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+#portfolio-info h3 {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.token-info {
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    padding-bottom: 25px;
+    width: 100%;
+}
+
+.token-info span {
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+
+    .token-info-head {
+        cursor: pointer;
+        padding: 6px 0;
+    }
+
+    .token-info-head span {
+        float: left;
+    }
+
+    .token-info-head::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .token-info-head:hover {
+        background-color: bisque;
+        transition: all 0.2s ease 0s;
+    }
+
+    /* Размеры ячеек */
+        .tih-1 {
+            width: 3%;
+        }
+        .tih-2 {
+            width: 13%;
+        }
+        .tih-3 {
+            width: 4%;
+        }
+        .tih-4 {
+            width: 12%;
+        }
+        .tih-5 {
+            width: 15%;
+        }
+        .tih-6 {
+            width: 18%;
+        }
+        .tih-7 {
+            width: 15%;
+        }
+        .tih-8 {
+            width: 15%;
+        }
+
+    .token-info-body {
+        display: none;
+        background-color: aliceblue;
+    }
+
+        .tib-row {
+            padding: 10px 0 10px 15px;
+        }
+
+        /* Размеры ячеек */
+            .tib-1 {
+                width: 3%;
+            }
+            .tib-2 {
+                width: 12%;
+            }
+            .tib-3 {
+                width: 10%;
+            }
+            .tib-4 {
+                width: 14%;
+            }
+            .tib-5 {
+                width: 15%;
+            }
+            .tib-6 {
+                width: 15%;
+            }
+            .tib-7 {
+                width: 15%;
+            }
+            .tib-8 {
+                width: 10%;
+            }
+/*********************************************
+***             CHART                      ***
+*********************************************/
+#chart-info {
+    display: none;
+    width: 100%;
+    height: 85vh;
+    border: 1px solid #000000;
+    background-color: antiquewhite;
+}
+
+/*********************************************
+***          Modal window                  ***
+*********************************************/
+#mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+}
+
+#modal-add {
+    display: none;
+    position: fixed;
+    margin: auto;
+    top: 20%;
+    left: calc(50% - 200px);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 7px;
+}
+
+    #modal-add form {
+        width: 350px;
+        text-align: center;
+    }
+
+    #modal-add form input {
+        margin-bottom: 10px;
+        padding: 5px 12px;
+        font-size: 16pt;
+        outline: none;
+        border-radius: 12px;
+        border: 1px solid #b5b5b5;
+        width: calc(100% - 26px);
+
+    }
+
+    #modal-add form input[type="radio"] {
+        width: 14px;
+        margin: 15px 6px 20px;
+    }
+
+    #modal-add form button {
+        cursor: pointer;
+        outline: none;
+        padding: 7px 21px 9px;
+        font-size: 18pt;
+        border-radius: 24px;
+        background-color: #b1de06;
+        color: #ffffff;
+        border: 2px solid #b1de06;
+        transition: all 0.5s ease 0s;
+    }
+
+    #modal-add form button:hover {
+        transition: all 0.5s ease 0s;
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+#modal-add img {
+    width: 32px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    cursor: pointer;
+}

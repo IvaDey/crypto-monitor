@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto monitor</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script src="scripts/actions.js"></script>
+</head>
+<body>
+<header>
+    <div class="general-info">
+        Общее количество позиций: <span id="pos_count">_____</span><br>
+        Оценка в BTC: <span id="BTC_value">_____</span> BTC<br>
+        Оценка в USD: $ <span id="USD_value">_____</span><br>
+        Оценка в RUB: <span id="RUB_value">_____</span> ₽<br>
+        Profit/Loss: <span id="BTC_profit">_____</span> BTC / $ <span id="USD_profit">_____</span> / <span id="RUB_profit">_____</span> ₽<br>
+        Profit/Loss (% BTC): <span id="BTC_percent_profit">_____</span> %<br>
+        Profit/Loss (% USD): <span id="USD_percent_profit">_____</span> %<br>
+        Profit/Loss (% RUB): <span id="RUB_percent_profit">_____</span> %<br>
+    </div>
+
+    <div class="exchange-info">
+        <span><b>1</b> BTC = <b id="btcusd">____</b> USD<br></span>
+        <span><b>1</b> BTC = <b id="btcrub">____</b> RUB<br></span>
+        <span><b>1</b> ETH = <b id="ethusd">____</b> USD<br></span>
+        <span><b>1</b> ETH = <b id="ethrub">____</b> RUB<br></span>
+        <span><b>1</b> USD = <b id="usdrub">____</b> RUB</span>
+    </div>
+</header>
+
+<div class="main-module">
+    <div class="tabs">
+        <div id="portfolio" class="tab">Портфель</div>
+        <div id="chart" class="tab">График</div>
+        <div id="add-coin" class="tab">Добавить</div>
+    </div>
+
+    <div id="portfolio-info">
+        <h3>Открытые позиции</h3>
+        <div id="open-pos" class="token-info">
+            <div class="token-info-head" style="padding: 15px 0;">
+                <span class="tih-1">№</span>
+                <span class="tih-2">Название</span>
+                <span class="tih-3">Тикер</span>
+                <span class="tih-4">Количество</span>
+                <span class="tih-5">Стоимость (BTC / USD)</span>
+                <span class="tih-6">Оценка (BTC / USD)</span>
+                <span class="tih-7">Profit/Loss (BTC / USD)</span>
+                <span class="tih-8">Profit/Loss (%BTC / %USD)</span>
+            </div><div></div>
+        </div>
+
+        <h3>Закрытые позиции</h3>
+        <div id="close-pos" class="token-info">
+            <div class="token-info-head" style="padding: 15px 0;">
+                <span class="tih-1">№</span>
+                <span class="tih-2">Название</span>
+                <span class="tih-3">Тикер</span>
+                <span class="tih-4">Количество</span>
+                <span class="tih-5">Стоимость (BTC / USD)</span>
+                <span class="tih-6">Оценка (BTC / USD)</span>
+                <span class="tih-7">Profit/Loss (BTC / USD)</span>
+                <span class="tih-8">Profit/Loss (%BTC / %USD)</span>
+            </div><div></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="chart-info">
+
+    </div>
+</div>
+
+<div id="mask"></div>
+
+<div id="modal-add">
+    <img id="closeBtn" src="img/close.png">
+    <form name="new-coin" method="post">
+        <input type="text" name="coinName" placeholder="Название"><br>
+        <input type="text" name="ticker" placeholder="Тикер"><br>
+        <input type="text" name="amount" placeholder="Количество"><br>
+        <input type="text" name="price" placeholder="Цена в BTC"><br>
+        <input type="radio" name="type" value="buy" checked>Buy
+        <input type="radio" name="type" value="sell">Sell<br>
+        <button id="send">Добавить</button>
+    </form>
+</div>
+</body>
+</html>
